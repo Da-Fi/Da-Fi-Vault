@@ -1,0 +1,142 @@
+====================================================== test session starts =======================================================
+platform linux -- Python 3.8.5, pytest-6.0.1, py-1.9.0, pluggy-0.13.1
+rootdir: /home/nocode326/brownie/da-fi-vault
+plugins: eth-brownie-1.11.10, forked-1.3.0, web3-5.11.1, hypothesis-5.35.0, xdist-1.34.0
+gw0 [46] / gw1 [46] / gw2 [46] / gw3 [46]
+..........F...................................                                                                             [100%]
+============================================================ FAILURES ============================================================
+_________________________________________________ test_deposit_with_wrong_amount _________________________________________________
+[gw1] linux -- Python 3.8.5 /home/nocode326/.local/pipx/venvs/eth-brownie/bin/python
+
+vault = <Vault Contract '0x602C71e4DAC47a042Ee7f46E0aee17F94A3bA0B6'>
+token = <Token Contract '0x3194cBDC3dbcd3E11a07892e7bA5c3394048Cc87'>
+gov = <Account '0x66aB6D9362d4F35596279692F0251Db635165871'>
+
+    def test_deposit_with_wrong_amount(vault, token, gov):
+        balance = token.balanceOf(gov) + 1
+        token.approve(vault, balance, {"from": gov})
+        with brownie.reverts():
+>           vault.deposit(balance, {"from": gov})
+
+tests/functional/vault/test_shares.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/functional/vault/test_shares.py:22: in test_deposit_with_wrong_amount
+    vault.deposit(balance, {"from": gov})
+../../.local/pipx/venvs/eth-brownie/lib/python3.8/site-packages/eth_event/main.py:271: in decode_traceTransaction
+    "data": _decode(topic_map[topics[0]]["inputs"], topics[1:], data),
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+inputs = [{'indexed': True, 'internalType': 'address', 'name': 'from', 'type': 'address'}, {'indexed': True, 'internalType': 'a..., 'name': 'to', 'type': 'address'}, {'indexed': True, 'internalType': 'uint256', 'name': 'tokenId', 'type': 'uint256'}]
+topics = ['0x0000000000000000000000000000000000000000000000000000000000000000', '0x00000000000000000000000066ab6d9362d4f35596279692f0251db635165871']
+data = '0x00000000000000000000000000000000000000000000065a4da25d3016c00001'
+
+    def _decode(inputs: List, topics: List, data: str) -> List:
+        indexed_count = len([i for i in inputs if i["indexed"]])
+    
+        if indexed_count and not topics:
+            # special case - if the ABI has indexed values but the log does not,
+            # we should still be able to decode the data
+            unindexed_types = inputs
+    
+        else:
+            if indexed_count < len(topics):
+                raise EventError(
+                    "Event log does not contain enough topics for the given ABI - this"
+                    " is usually because an event argument is not marked as indexed"
+                )
+            if indexed_count > len(topics):
+>               raise EventError(
+                    "Event log contains more topics than expected for the given ABI - this is"
+                    " usually because an event argument is incorrectly marked as indexed"
+                )
+E               eth_event.main.EventError: Event log contains more topics than expected for the given ABI - this is usually because an event argument is incorrectly marked as indexed
+
+../../.local/pipx/venvs/eth-brownie/lib/python3.8/site-packages/eth_event/main.py:306: EventError
+======================================================== warnings summary ========================================================
+tests/functional/strategy/test_config.py::test_strategy_deployment
+tests/functional/strategy/test_migration.py::test_good_migration
+tests/functional/strategy/test_misc.py::test_harvest_tend_authority
+tests/functional/vault/test_misc.py::test_sweep
+tests/functional/strategy/test_misc.py::test_sweep
+tests/functional/strategy/test_shutdown.py::test_emergency_shutdown
+  /home/nocode326/.local/pipx/venvs/eth-brownie/lib/python3.8/site-packages/brownie/network/event.py:231: UserWarning: Event log contains more topics than expected for the given ABI - this is usually because an event argument is incorrectly marked as indexed
+    warnings.warn(str(exc))
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+============================================================ Coverage ============================================================
+
+  contract: TestStrategy - 96.1%
+    BaseStrategy.apiVersion - 100.0%
+    BaseStrategy.governance - 100.0%
+    BaseStrategy.migrate - 100.0%
+    BaseStrategy.protectedTokens - 100.0%
+    BaseStrategy.setKeeper - 100.0%
+    BaseStrategy.setStrategist - 100.0%
+    BaseStrategy.sweep - 100.0%
+    BaseStrategy.tend - 100.0%
+    BaseStrategy.withdraw - 100.0%
+    TestStrategy._takeFunds - 100.0%
+    TestStrategy.adjustPosition - 100.0%
+    TestStrategy.estimatedTotalAssets - 100.0%
+    TestStrategy.exitPosition - 100.0%
+    TestStrategy.expectedReturn - 100.0%
+    TestStrategy.harvestTrigger - 100.0%
+    TestStrategy.liquidatePosition - 100.0%
+    TestStrategy.name - 100.0%
+    TestStrategy.prepareMigration - 100.0%
+    BaseStrategy.harvest - 88.7%
+    BaseStrategy.setEmergencyExit - 83.3%
+
+  contract: Vault - 95.5%
+    Vault._balanceSheetOfStrategy - 100.0%
+    Vault._creditAvailable - 100.0%
+    Vault._debtOutstanding - 100.0%
+    Vault._issueSharesForAmount - 100.0%
+    Vault._organizeWithdrawalQueue - 100.0%
+    Vault._shareValue - 100.0%
+    Vault._sharesForAmount - 100.0%
+    Vault._totalAssets - 100.0%
+    Vault._transfer - 100.0%
+    Vault.acceptGovernance - 100.0%
+    Vault.addStrategy - 100.0%
+    Vault.apiVersion - 100.0%
+    Vault.approve - 100.0%
+    Vault.balanceSheetOfStrategy - 100.0%
+    Vault.creditAvailable - 100.0%
+    Vault.debtOutstanding - 100.0%
+    Vault.expectedReturn - 100.0%
+    Vault.maxAvailableShares - 100.0%
+    Vault.migrateStrategy - 100.0%
+    Vault.pricePerShare - 100.0%
+    Vault.removeStrategyFromQueue - 100.0%
+    Vault.report - 100.0%
+    Vault.revokeStrategy - 100.0%
+    Vault.setDepositLimit - 100.0%
+    Vault.setEmergencyShutdown - 100.0%
+    Vault.setGovernance - 100.0%
+    Vault.setGuardian - 100.0%
+    Vault.setManagementFee - 100.0%
+    Vault.setName - 100.0%
+    Vault.setPerformanceFee - 100.0%
+    Vault.setRewards - 100.0%
+    Vault.setSymbol - 100.0%
+    Vault.sweep - 100.0%
+    Vault.totalAssets - 100.0%
+    Vault.totalBalanceSheet - 100.0%
+    Vault.transfer - 100.0%
+    Vault.transferFrom - 100.0%
+    Vault.updateStrategyDebtLimit - 100.0%
+    Vault.updateStrategyPerformanceFee - 100.0%
+    Vault.updateStrategyRateLimit - 100.0%
+    Vault.withdraw - 100.0%
+    Vault.deposit - 95.0%
+    Vault.setWithdrawalQueue - 93.8%
+    Vault.erc20_safe_transfer - 75.0%
+    Vault._expectedReturn - 66.7%
+    Vault.addStrategyToQueue - 63.7%
+
+Coverage report saved at /home/nocode326/brownie/da-fi-vault/reports/coverage.json
+View the report using the Brownie GUI
+==================================================== short test summary info =====================================================
+FAILED tests/functional/vault/test_shares.py::test_deposit_with_wrong_amount - eth_event.main.EventError: Event log contains mo...
+===================================== 1 failed, 45 passed, 6 warnings in 1301.15s (0:21:41) ======================================

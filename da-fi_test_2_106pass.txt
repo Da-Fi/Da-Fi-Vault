@@ -1,0 +1,152 @@
+================================================================ test session starts ================================================================
+platform linux -- Python 3.8.5, pytest-6.0.1, py-1.9.0, pluggy-0.13.1 -- /home/nocode326/.local/pipx/venvs/eth-brownie/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'brownie-verbose' -> verbosity=2, deadline=None, max_examples=50, stateful_step_count=10, report_multiple_bugs=False, database=DirectoryBasedExampleDatabase(PosixPath('/home/nocode326/.brownie/hypothesis'))
+rootdir: /home/nocode326/brownie/da-fi-protocol
+plugins: eth-brownie-1.11.10, forked-1.3.0, web3-5.11.1, hypothesis-5.35.0, xdist-1.34.0
+collected 108 items                                                                                                                                 
+
+Launching 'ganache-cli --port 8545 --gasLimit 12000000 --accounts 10 --hardfork istanbul --mnemonic brownie --fork https://mainnet.infura.io/v3/38e56806c8f4467ab892bd3911d54157'...
+
+tests/functional/controllers/test_config.py::test_controller_deployment PASSED
+tests/functional/controllers/test_config.py::test_controller_setParams[split-setSplit-1000] PASSED
+tests/functional/controllers/test_config.py::test_controller_setParams[onesplit-setOneSplit-None] PASSED
+tests/functional/controllers/test_config.py::test_controller_setParams[governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy0] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy1] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy2] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy3] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy4] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy5] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy6] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy7] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy8] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy9] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy10] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy0-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy0-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy0-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy0-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy0-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy0-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy1-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy1-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy1-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy1-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy1-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy1-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy2-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy2-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy2-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy2-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy2-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy2-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy3-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy3-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy3-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy3-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy3-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy3-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy4-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy4-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy4-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy4-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy4-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy4-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy5-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy5-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy5-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy5-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy5-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy5-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy6-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy6-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy6-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy6-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy6-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy6-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy7-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy7-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy7-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy7-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy7-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy7-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy9-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy9-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy9-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy9-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy9-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy9-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy10-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy10-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy10-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy10-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy10-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy10-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/utils/test_oracles.py::test_hardcoded_config[Oracle0-0xf185d0682d50819263941e5f4EacC763CC5C6C42-0x9B8Eb8b3d6e2e0Db36F41455185FEF7049a35CaE] PASSED
+tests/functional/utils/test_oracles.py::test_hardcoded_config[Oracle1-0x81FE72B5A8d1A857d176C3E7d5Bd2679A9B85763-0x729D19f657BD0614b4985Cf1D82531c67569197B] PASSED
+tests/functional/utils/test_oracles.py::test_governance[Oracle0] PASSED
+tests/functional/utils/test_oracles.py::test_governance[Oracle1] PASSED
+tests/functional/utils/test_oracles.py::test_whitelist[Oracle0] PASSED
+tests/functional/utils/test_oracles.py::test_whitelist[Oracle1] PASSED
+tests/functional/utils/test_oracles.py::test_read[read-Oracle0] PASSED
+tests/functional/utils/test_oracles.py::test_read[read-Oracle1] PASSED
+tests/functional/utils/test_oracles.py::test_read[foresight-Oracle0] PASSED
+tests/functional/utils/test_oracles.py::test_read[foresight-Oracle1] PASSED
+tests/functional/utils/test_oracles.py::test_read_bud[read] SKIPPED
+tests/functional/utils/test_oracles.py::test_read_bud[foresight] SKIPPED
+tests/functional/vaults/test_config.py::test_vault_deployment[Vault0] PASSED
+tests/functional/vaults/test_config.py::test_vault_deployment[Vault1] PASSED
+tests/functional/vaults/test_config.py::test_vault_deployment[Vault2] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-min-setMin-9000] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-healthFactor-setHealthFactor-100] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-controller-setController-None] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-governance-setGovernance-None] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-min-setMin-9000] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-healthFactor-setHealthFactor-100] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-controller-setController-None] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-governance-setGovernance-None] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-min-setMin-9000] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-healthFactor-setHealthFactor-100] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-controller-setController-None] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-governance-setGovernance-None] PASSED
+
+================================================================= warnings summary ==================================================================
+tests/functional/strategies/test_config.py: 7 warnings
+tests/functional/vaults/test_config.py: 15 warnings
+  /home/nocode326/.local/pipx/venvs/eth-brownie/lib/python3.8/site-packages/brownie/network/event.py:231: UserWarning: Event log contains more topics than expected for the given ABI - this is usually because an event argument is incorrectly marked as indexed
+    warnings.warn(str(exc))
+
+tests/functional/vaults/test_config.py::test_vault_deployment[Vault0]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-min-setMin-9000]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-healthFactor-setHealthFactor-100]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-controller-setController-None]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-governance-setGovernance-None]
+  /home/nocode326/.local/pipx/venvs/eth-brownie/lib/python3.8/site-packages/brownie/network/contract.py:388: BrownieEnvironmentWarning: 'yVault' defines a 'balance' function, 'yVault.balance' is unavailable
+    warnings.warn(
+
+tests/functional/vaults/test_config.py::test_vault_deployment[Vault1]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-min-setMin-9000]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-healthFactor-setHealthFactor-100]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-controller-setController-None]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-governance-setGovernance-None]
+  /home/nocode326/.local/pipx/venvs/eth-brownie/lib/python3.8/site-packages/brownie/network/contract.py:388: BrownieEnvironmentWarning: 'yWETH' defines a 'balance' function, 'yWETH.balance' is unavailable
+    warnings.warn(
+
+tests/functional/vaults/test_config.py::test_vault_deployment[Vault2]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-min-setMin-9000]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-healthFactor-setHealthFactor-100]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-controller-setController-None]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-governance-setGovernance-None]
+  /home/nocode326/.local/pipx/venvs/eth-brownie/lib/python3.8/site-packages/brownie/network/contract.py:388: BrownieEnvironmentWarning: 'yDelegatedVault' defines a 'balance' function, 'yDelegatedVault.balance' is unavailable
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+============================================== 106 passed, 2 skipped, 37 warnings in 198.42s (0:03:18) ==============================================
+Terminating local RPC client...

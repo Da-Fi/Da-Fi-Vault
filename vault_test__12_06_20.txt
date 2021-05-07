@@ -1,0 +1,577 @@
+============================================================================ test session starts =============================================================================
+platform linux -- Python 3.8.5, pytest-6.0.1, py-1.9.0, pluggy-0.13.1 -- /home/nocode326/.local/pipx/venvs/eth-brownie/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'brownie-verbose' -> verbosity=2, deadline=None, max_examples=50, stateful_step_count=10, report_multiple_bugs=False, database=DirectoryBasedExampleDatabase(PosixPath('/home/nocode326/.brownie/hypothesis'))
+rootdir: /home/nocode326/da-fi/da-fi-protocol
+plugins: eth-brownie-1.12.2, forked-1.3.0, web3-5.11.1, hypothesis-5.41.3, xdist-1.34.0
+collected 108 items                                                                                                                                                          
+
+Launching 'ganache-cli --accounts 10 --hardfork istanbul --gasLimit 12000000 --mnemonic brownie --port 8545 --unlock 0x2f63f6fac1397f48217c5de6d17a3d9d10d3b5fa --unlock 0x7f492af2383e6fc3fd13a438812ff654c2620e55 --unlock 0x507f6c81323b9d5331c3882462621174e2db7215 --unlock 0x8f91cfb976623c9eb61ce36b9520ae78ef508790 --unlock 0x87a5342ee383925065a21d29fb5ef526c26d9ced --unlock 0x894ce60a77c1dd19e35d59df26abd5b0bebd8edb --unlock 0x42929b2c79b4b3632d98566f667f297b8e52b72b --unlock 0x562bdab1799937c236f7628a74bc53f533e15d62 --unlock 0xbfe705cfceb050aef01dc18df60717e50cd84535 --unlock 0x88813e17e01f5be8cde8f44be35a40741f77437f --unlock 0x8dcc314df0e4c6487b459351cfee5201742ccf4d --unlock 0x87cdeec8d85b58f7841ff87a9139932e29501f50'...
+
+tests/functional/controllers/test_config.py::test_controller_deployment PASSED
+tests/functional/controllers/test_config.py::test_controller_setParams[split-setSplit-1000] PASSED
+tests/functional/controllers/test_config.py::test_controller_setParams[onesplit-setOneSplit-None] PASSED
+tests/functional/controllers/test_config.py::test_controller_setParams[governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy0] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy1] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy2] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy3] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy4] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy5] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy6] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy7] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy8] FAILED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy9] PASSED
+tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy10] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy0-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy0-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy0-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy0-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy0-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy0-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy1-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy1-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy1-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy1-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy1-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy1-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy2-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy2-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy2-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy2-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy2-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy2-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy3-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy3-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy3-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy3-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy3-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy3-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy4-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy4-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy4-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy4-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy4-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy4-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy5-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy5-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy5-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy5-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy5-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy5-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy6-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy6-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy6-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy6-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy6-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy6-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy7-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy7-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy7-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy7-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy7-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy7-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-governance-setGovernance-None] FAILED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-controller-setController-None] FAILED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-strategist-setStrategist-None] FAILED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-fee-setFee-100] FAILED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-withdrawalFee-setWithdrawalFee-100] FAILED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-performanceFee-setPerformanceFee-1000] FAILED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy9-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy9-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy9-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy9-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy9-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy9-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy10-governance-setGovernance-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy10-controller-setController-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy10-strategist-setStrategist-None] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy10-fee-setFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy10-withdrawalFee-setWithdrawalFee-100] PASSED
+tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy10-performanceFee-setPerformanceFee-1000] PASSED
+tests/functional/utils/test_oracles.py::test_hardcoded_config[Oracle0-0xf185d0682d50819263941e5f4EacC763CC5C6C42-0x9B8Eb8b3d6e2e0Db36F41455185FEF7049a35CaE] PASSED
+tests/functional/utils/test_oracles.py::test_hardcoded_config[Oracle1-0x81FE72B5A8d1A857d176C3E7d5Bd2679A9B85763-0x729D19f657BD0614b4985Cf1D82531c67569197B] PASSED
+tests/functional/utils/test_oracles.py::test_governance[Oracle0] PASSED
+tests/functional/utils/test_oracles.py::test_governance[Oracle1] PASSED
+tests/functional/utils/test_oracles.py::test_whitelist[Oracle0] PASSED
+tests/functional/utils/test_oracles.py::test_whitelist[Oracle1] PASSED
+tests/functional/utils/test_oracles.py::test_read[read-Oracle0] FAILED
+tests/functional/utils/test_oracles.py::test_read[read-Oracle1] FAILED
+tests/functional/utils/test_oracles.py::test_read[foresight-Oracle0] FAILED
+tests/functional/utils/test_oracles.py::test_read[foresight-Oracle1] FAILED
+tests/functional/utils/test_oracles.py::test_read_bud[read] SKIPPED
+tests/functional/utils/test_oracles.py::test_read_bud[foresight] SKIPPED
+tests/functional/vaults/test_config.py::test_vault_deployment[Vault0] PASSED
+tests/functional/vaults/test_config.py::test_vault_deployment[Vault1] PASSED
+tests/functional/vaults/test_config.py::test_vault_deployment[Vault2] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-min-setMin-9000] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-healthFactor-setHealthFactor-100] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-controller-setController-None] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-governance-setGovernance-None] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-min-setMin-9000] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-healthFactor-setHealthFactor-100] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-controller-setController-None] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-governance-setGovernance-None] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-min-setMin-9000] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-healthFactor-setHealthFactor-100] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-controller-setController-None] PASSED
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-governance-setGovernance-None] PASSED
+
+================================================================================== FAILURES ==================================================================================
+____________________________________________________________________ test_strategy_deployment[Strategy8] _____________________________________________________________________
+
+gov = <Account '0x21b42413bA931038f35e7A5224FaDb065d297Ba3'>, controller = <Account '0x46C0a5326E643E4f71D3149d50B48216e174Ae84'>
+Strategy = <brownie.network.contract.ContractContainer object at 0x7f99b9161220>
+
+>   ???
+E   brownie.exceptions.VirtualMachineError: revert
+
+/home/nocode326/brownie/da-fi-protocol/tests/functional/strategies/test_config.py:36: VirtualMachineError
+______________________________________________________ test_strategy_setParams[Strategy8-governance-setGovernance-None] ______________________________________________________
+
+accounts = <brownie.network.account.Accounts object at 0x7f99c5da3c70>, gov = <Account '0x21b42413bA931038f35e7A5224FaDb065d297Ba3'>
+controller = <Account '0x46C0a5326E643E4f71D3149d50B48216e174Ae84'>, getter = 'governance', setter = 'setGovernance'
+val = <Account '0x33A4622B82D4c04a53e170c638B944ce27cffce3'>, Strategy = <brownie.network.contract.ContractContainer object at 0x7f99b9161220>
+
+>   ???
+E   brownie.exceptions.VirtualMachineError: revert
+
+/home/nocode326/brownie/da-fi-protocol/tests/functional/strategies/test_config.py:60: VirtualMachineError
+______________________________________________________ test_strategy_setParams[Strategy8-controller-setController-None] ______________________________________________________
+
+accounts = <brownie.network.account.Accounts object at 0x7f99c5da3c70>, gov = <Account '0x21b42413bA931038f35e7A5224FaDb065d297Ba3'>
+controller = <Account '0x46C0a5326E643E4f71D3149d50B48216e174Ae84'>, getter = 'controller', setter = 'setController'
+val = <Account '0x33A4622B82D4c04a53e170c638B944ce27cffce3'>, Strategy = <brownie.network.contract.ContractContainer object at 0x7f99b9161220>
+
+>   ???
+E   brownie.exceptions.VirtualMachineError: revert
+
+/home/nocode326/brownie/da-fi-protocol/tests/functional/strategies/test_config.py:60: VirtualMachineError
+______________________________________________________ test_strategy_setParams[Strategy8-strategist-setStrategist-None] ______________________________________________________
+
+accounts = <brownie.network.account.Accounts object at 0x7f99c5da3c70>, gov = <Account '0x21b42413bA931038f35e7A5224FaDb065d297Ba3'>
+controller = <Account '0x46C0a5326E643E4f71D3149d50B48216e174Ae84'>, getter = 'strategist', setter = 'setStrategist'
+val = <Account '0x33A4622B82D4c04a53e170c638B944ce27cffce3'>, Strategy = <brownie.network.contract.ContractContainer object at 0x7f99b9161220>
+
+>   ???
+E   brownie.exceptions.VirtualMachineError: revert
+
+/home/nocode326/brownie/da-fi-protocol/tests/functional/strategies/test_config.py:60: VirtualMachineError
+_____________________________________________________________ test_strategy_setParams[Strategy8-fee-setFee-100] ______________________________________________________________
+
+accounts = <brownie.network.account.Accounts object at 0x7f99c5da3c70>, gov = <Account '0x21b42413bA931038f35e7A5224FaDb065d297Ba3'>
+controller = <Account '0x46C0a5326E643E4f71D3149d50B48216e174Ae84'>, getter = 'fee', setter = 'setFee', val = 100
+Strategy = <brownie.network.contract.ContractContainer object at 0x7f99b9161220>
+
+>   ???
+E   brownie.exceptions.VirtualMachineError: revert
+
+/home/nocode326/brownie/da-fi-protocol/tests/functional/strategies/test_config.py:60: VirtualMachineError
+___________________________________________________ test_strategy_setParams[Strategy8-withdrawalFee-setWithdrawalFee-100] ____________________________________________________
+
+accounts = <brownie.network.account.Accounts object at 0x7f99c5da3c70>, gov = <Account '0x21b42413bA931038f35e7A5224FaDb065d297Ba3'>
+controller = <Account '0x46C0a5326E643E4f71D3149d50B48216e174Ae84'>, getter = 'withdrawalFee', setter = 'setWithdrawalFee', val = 100
+Strategy = <brownie.network.contract.ContractContainer object at 0x7f99b9161220>
+
+>   ???
+E   brownie.exceptions.VirtualMachineError: revert
+
+/home/nocode326/brownie/da-fi-protocol/tests/functional/strategies/test_config.py:60: VirtualMachineError
+__________________________________________________ test_strategy_setParams[Strategy8-performanceFee-setPerformanceFee-1000] __________________________________________________
+
+accounts = <brownie.network.account.Accounts object at 0x7f99c5da3c70>, gov = <Account '0x21b42413bA931038f35e7A5224FaDb065d297Ba3'>
+controller = <Account '0x46C0a5326E643E4f71D3149d50B48216e174Ae84'>, getter = 'performanceFee', setter = 'setPerformanceFee', val = 1000
+Strategy = <brownie.network.contract.ContractContainer object at 0x7f99b9161220>
+
+>   ???
+E   brownie.exceptions.VirtualMachineError: revert
+
+/home/nocode326/brownie/da-fi-protocol/tests/functional/strategies/test_config.py:60: VirtualMachineError
+__________________________________________________________________________ test_read[read-Oracle0] ___________________________________________________________________________
+
+a = <brownie.network.account.Accounts object at 0x7f99c5da3c70>, Oracle = <brownie.network.contract.ContractContainer object at 0x7f99bb569100>, func = 'read'
+
+>   ???
+E   brownie.exceptions.VirtualMachineError: revert
+
+/home/nocode326/brownie/da-fi-protocol/tests/functional/utils/test_oracles.py:54: VirtualMachineError
+__________________________________________________________________________ test_read[read-Oracle1] ___________________________________________________________________________
+
+a = <brownie.network.account.Accounts object at 0x7f99c5da3c70>, Oracle = <brownie.network.contract.ContractContainer object at 0x7f99bb569130>, func = 'read'
+
+>   ???
+E   brownie.exceptions.VirtualMachineError: revert
+
+/home/nocode326/brownie/da-fi-protocol/tests/functional/utils/test_oracles.py:54: VirtualMachineError
+________________________________________________________________________ test_read[foresight-Oracle0] ________________________________________________________________________
+
+a = <brownie.network.account.Accounts object at 0x7f99c5da3c70>, Oracle = <brownie.network.contract.ContractContainer object at 0x7f99bb569100>, func = 'foresight'
+
+>   ???
+E   brownie.exceptions.VirtualMachineError: revert
+
+/home/nocode326/brownie/da-fi-protocol/tests/functional/utils/test_oracles.py:54: VirtualMachineError
+________________________________________________________________________ test_read[foresight-Oracle1] ________________________________________________________________________
+
+a = <brownie.network.account.Accounts object at 0x7f99c5da3c70>, Oracle = <brownie.network.contract.ContractContainer object at 0x7f99bb569130>, func = 'foresight'
+
+>   ???
+E   brownie.exceptions.VirtualMachineError: revert
+
+/home/nocode326/brownie/da-fi-protocol/tests/functional/utils/test_oracles.py:54: VirtualMachineError
+============================================================================== warnings summary ==============================================================================
+tests/functional/vaults/test_config.py: 15 warnings
+  /home/nocode326/.local/pipx/venvs/eth-brownie/lib/python3.8/site-packages/brownie/network/event.py:234: UserWarning: Event log contains more topics than expected for the given ABI - this is usually because an event argument is incorrectly marked as indexed
+    warnings.warn(str(exc))
+
+tests/functional/vaults/test_config.py::test_vault_deployment[Vault0]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-min-setMin-9000]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-healthFactor-setHealthFactor-100]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-controller-setController-None]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault0-governance-setGovernance-None]
+  /home/nocode326/.local/pipx/venvs/eth-brownie/lib/python3.8/site-packages/brownie/network/contract.py:468: BrownieEnvironmentWarning: 'yVault' defines a 'balance' function, 'yVault.balance' is unavailable
+    warnings.warn(
+
+tests/functional/vaults/test_config.py::test_vault_deployment[Vault1]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-min-setMin-9000]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-healthFactor-setHealthFactor-100]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-controller-setController-None]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault1-governance-setGovernance-None]
+  /home/nocode326/.local/pipx/venvs/eth-brownie/lib/python3.8/site-packages/brownie/network/contract.py:468: BrownieEnvironmentWarning: 'yWETH' defines a 'balance' function, 'yWETH.balance' is unavailable
+    warnings.warn(
+
+tests/functional/vaults/test_config.py::test_vault_deployment[Vault2]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-min-setMin-9000]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-healthFactor-setHealthFactor-100]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-controller-setController-None]
+tests/functional/vaults/test_config.py::test_vault_setParams[Vault2-governance-setGovernance-None]
+  /home/nocode326/.local/pipx/venvs/eth-brownie/lib/python3.8/site-packages/brownie/network/contract.py:468: BrownieEnvironmentWarning: 'yDelegatedVault' defines a 'balance' function, 'yDelegatedVault.balance' is unavailable
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+================================================================================== Coverage ==================================================================================
+
+  contract: Controller - 10.8%
+    Controller.setGovernance - 100.0%
+    Controller.setOneSplit - 100.0%
+    Controller.setSplit - 100.0%
+    Controller.approveStrategy - 0.0%
+    Controller.balanceOf - 0.0%
+    Controller.earn - 0.0%
+    Controller.getExpectedReturn - 0.0%
+    Controller.inCaseStrategyTokenGetStuck - 0.0%
+    Controller.inCaseTokensGetStuck - 0.0%
+    Controller.revokeStrategy - 0.0%
+    Controller.setConverter - 0.0%
+    Controller.setRewards - 0.0%
+    Controller.setStrategist - 0.0%
+    Controller.setStrategy - 0.0%
+    Controller.setVault - 0.0%
+    Controller.withdraw - 0.0%
+    Controller.withdrawAll - 0.0%
+    Controller.yearn - 0.0%
+
+  contract: StrategyCreamYFI - 21.2%
+    StrategyCreamYFI.getName - 100.0%
+    StrategyCreamYFI.setController - 100.0%
+    StrategyCreamYFI.setGovernance - 100.0%
+    StrategyCreamYFI.setPerformanceFee - 100.0%
+    StrategyCreamYFI.setStrategist - 100.0%
+    StrategyCreamYFI.setWithdrawalFee - 100.0%
+    StrategyCreamYFI._withdrawAll - 0.0%
+    StrategyCreamYFI._withdrawC - 0.0%
+    StrategyCreamYFI._withdrawSome - 0.0%
+    StrategyCreamYFI.balanceC - 0.0%
+    StrategyCreamYFI.balanceCInToken - 0.0%
+    StrategyCreamYFI.balanceOf - 0.0%
+    StrategyCreamYFI.balanceOfWant - 0.0%
+    StrategyCreamYFI.deposit - 0.0%
+    StrategyCreamYFI.harvest - 0.0%
+    StrategyCreamYFI.withdraw - 0.0%
+    StrategyCreamYFI.withdrawAll - 0.0%
+
+  contract: StrategyCurve3CrvVoterProxy - 19.0%
+    StrategyCurve3CrvVoterProxy.getName - 100.0%
+    StrategyCurve3CrvVoterProxy.setController - 100.0%
+    StrategyCurve3CrvVoterProxy.setGovernance - 100.0%
+    StrategyCurve3CrvVoterProxy.setPerformanceFee - 100.0%
+    StrategyCurve3CrvVoterProxy.setWithdrawalFee - 100.0%
+    StrategyCurve3CrvVoterProxy.setStrategist - 87.5%
+    StrategyCurve3CrvVoterProxy._withdrawAll - 0.0%
+    StrategyCurve3CrvVoterProxy._withdrawSome - 0.0%
+    StrategyCurve3CrvVoterProxy.balanceOf - 0.0%
+    StrategyCurve3CrvVoterProxy.balanceOfPool - 0.0%
+    StrategyCurve3CrvVoterProxy.balanceOfWant - 0.0%
+    StrategyCurve3CrvVoterProxy.deposit - 0.0%
+    StrategyCurve3CrvVoterProxy.harvest - 0.0%
+    StrategyCurve3CrvVoterProxy.setKeepCRV - 0.0%
+    StrategyCurve3CrvVoterProxy.setProxy - 0.0%
+    StrategyCurve3CrvVoterProxy.setStrategistReward - 0.0%
+    StrategyCurve3CrvVoterProxy.withdraw - 0.0%
+    StrategyCurve3CrvVoterProxy.withdrawAll - 0.0%
+
+  contract: StrategyCurveBTCVoterProxy - 18.7%
+    StrategyCurveBTCVoterProxy.getName - 100.0%
+    StrategyCurveBTCVoterProxy.setController - 100.0%
+    StrategyCurveBTCVoterProxy.setGovernance - 100.0%
+    StrategyCurveBTCVoterProxy.setPerformanceFee - 100.0%
+    StrategyCurveBTCVoterProxy.setStrategist - 100.0%
+    StrategyCurveBTCVoterProxy.setWithdrawalFee - 100.0%
+    StrategyCurveBTCVoterProxy._withdrawAll - 0.0%
+    StrategyCurveBTCVoterProxy._withdrawSome - 0.0%
+    StrategyCurveBTCVoterProxy.balanceOf - 0.0%
+    StrategyCurveBTCVoterProxy.balanceOfPool - 0.0%
+    StrategyCurveBTCVoterProxy.balanceOfWant - 0.0%
+    StrategyCurveBTCVoterProxy.deposit - 0.0%
+    StrategyCurveBTCVoterProxy.harvest - 0.0%
+    StrategyCurveBTCVoterProxy.setKeepCRV - 0.0%
+    StrategyCurveBTCVoterProxy.setProxy - 0.0%
+    StrategyCurveBTCVoterProxy.withdraw - 0.0%
+    StrategyCurveBTCVoterProxy.withdrawAll - 0.0%
+
+  contract: StrategyCurveBUSDVoterProxy - 18.3%
+    StrategyCurveBUSDVoterProxy.getName - 100.0%
+    StrategyCurveBUSDVoterProxy.setController - 100.0%
+    StrategyCurveBUSDVoterProxy.setGovernance - 100.0%
+    StrategyCurveBUSDVoterProxy.setPerformanceFee - 100.0%
+    StrategyCurveBUSDVoterProxy.setStrategist - 100.0%
+    StrategyCurveBUSDVoterProxy.setWithdrawalFee - 100.0%
+    StrategyCurveBUSDVoterProxy._withdrawAll - 0.0%
+    StrategyCurveBUSDVoterProxy._withdrawSome - 0.0%
+    StrategyCurveBUSDVoterProxy.balanceOf - 0.0%
+    StrategyCurveBUSDVoterProxy.balanceOfPool - 0.0%
+    StrategyCurveBUSDVoterProxy.balanceOfWant - 0.0%
+    StrategyCurveBUSDVoterProxy.deposit - 0.0%
+    StrategyCurveBUSDVoterProxy.harvest - 0.0%
+    StrategyCurveBUSDVoterProxy.setKeepCRV - 0.0%
+    StrategyCurveBUSDVoterProxy.setProxy - 0.0%
+    StrategyCurveBUSDVoterProxy.withdraw - 0.0%
+    StrategyCurveBUSDVoterProxy.withdrawAll - 0.0%
+
+  contract: StrategyCurveYVoterProxy - 17.9%
+    StrategyCurveYVoterProxy.getName - 100.0%
+    StrategyCurveYVoterProxy.setController - 100.0%
+    StrategyCurveYVoterProxy.setGovernance - 100.0%
+    StrategyCurveYVoterProxy.setPerformanceFee - 100.0%
+    StrategyCurveYVoterProxy.setStrategist - 100.0%
+    StrategyCurveYVoterProxy.setWithdrawalFee - 100.0%
+    StrategyCurveYVoterProxy._withdrawAll - 0.0%
+    StrategyCurveYVoterProxy._withdrawSome - 0.0%
+    StrategyCurveYVoterProxy.balanceOf - 0.0%
+    StrategyCurveYVoterProxy.balanceOfPool - 0.0%
+    StrategyCurveYVoterProxy.balanceOfWant - 0.0%
+    StrategyCurveYVoterProxy.deposit - 0.0%
+    StrategyCurveYVoterProxy.harvest - 0.0%
+    StrategyCurveYVoterProxy.setKeepCRV - 0.0%
+    StrategyCurveYVoterProxy.setProxy - 0.0%
+    StrategyCurveYVoterProxy.withdraw - 0.0%
+    StrategyCurveYVoterProxy.withdrawAll - 0.0%
+
+  contract: StrategyDAICurve - 8.8%
+    StrategyDAICurve.getName - 100.0%
+    StrategyDAICurve.setController - 100.0%
+    StrategyDAICurve.setGovernance - 100.0%
+    StrategyDAICurve._withdrawAll - 0.0%
+    StrategyDAICurve._withdrawSome - 0.0%
+    StrategyDAICurve.balanceOf - 0.0%
+    StrategyDAICurve.balanceOfWant - 0.0%
+    StrategyDAICurve.balanceOfYCRV - 0.0%
+    StrategyDAICurve.balanceOfYCRVyTUSD - 0.0%
+    StrategyDAICurve.balanceOfYYCRV - 0.0%
+    StrategyDAICurve.balanceOfYYCRVinYCRV - 0.0%
+    StrategyDAICurve.balanceOfYYCRVinyTUSD - 0.0%
+    StrategyDAICurve.deposit - 0.0%
+    StrategyDAICurve.withdraw - 0.0%
+    StrategyDAICurve.withdrawAll - 0.0%
+    StrategyDAICurve.withdrawUnderlying - 0.0%
+
+  contract: StrategyDForceUSDC - 20.4%
+    StrategyDForceUSDC.getName - 100.0%
+    StrategyDForceUSDC.setController - 100.0%
+    StrategyDForceUSDC.setGovernance - 100.0%
+    StrategyDForceUSDC.setPerformanceFee - 100.0%
+    StrategyDForceUSDC.setStrategist - 100.0%
+    StrategyDForceUSDC.setWithdrawalFee - 100.0%
+    StrategyDForceUSDC._withdrawAll - 0.0%
+    StrategyDForceUSDC._withdrawSome - 0.0%
+    StrategyDForceUSDC.balanceOf - 0.0%
+    StrategyDForceUSDC.balanceOfDUSDC - 0.0%
+    StrategyDForceUSDC.balanceOfPool - 0.0%
+    StrategyDForceUSDC.balanceOfWant - 0.0%
+    StrategyDForceUSDC.deposit - 0.0%
+    StrategyDForceUSDC.getExchangeRate - 0.0%
+    StrategyDForceUSDC.harvest - 0.0%
+    StrategyDForceUSDC.withdraw - 0.0%
+    StrategyDForceUSDC.withdrawAll - 0.0%
+
+  contract: StrategyDForceUSDT - 20.4%
+    StrategyDForceUSDT.getName - 100.0%
+    StrategyDForceUSDT.setController - 100.0%
+    StrategyDForceUSDT.setGovernance - 100.0%
+    StrategyDForceUSDT.setPerformanceFee - 100.0%
+    StrategyDForceUSDT.setStrategist - 100.0%
+    StrategyDForceUSDT.setWithdrawalFee - 100.0%
+    StrategyDForceUSDT._withdrawAll - 0.0%
+    StrategyDForceUSDT._withdrawSome - 0.0%
+    StrategyDForceUSDT.balanceOf - 0.0%
+    StrategyDForceUSDT.balanceOfD - 0.0%
+    StrategyDForceUSDT.balanceOfPool - 0.0%
+    StrategyDForceUSDT.balanceOfWant - 0.0%
+    StrategyDForceUSDT.deposit - 0.0%
+    StrategyDForceUSDT.getExchangeRate - 0.0%
+    StrategyDForceUSDT.harvest - 0.0%
+    StrategyDForceUSDT.withdraw - 0.0%
+    StrategyDForceUSDT.withdrawAll - 0.0%
+
+  contract: StrategyTUSDCurve - 8.8%
+    StrategyTUSDCurve.getName - 100.0%
+    StrategyTUSDCurve.setController - 100.0%
+    StrategyTUSDCurve.setGovernance - 100.0%
+    StrategyTUSDCurve._withdrawAll - 0.0%
+    StrategyTUSDCurve._withdrawSome - 0.0%
+    StrategyTUSDCurve.balanceOf - 0.0%
+    StrategyTUSDCurve.balanceOfWant - 0.0%
+    StrategyTUSDCurve.balanceOfYCRV - 0.0%
+    StrategyTUSDCurve.balanceOfYCRVyTUSD - 0.0%
+    StrategyTUSDCurve.balanceOfYYCRV - 0.0%
+    StrategyTUSDCurve.balanceOfYYCRVinYCRV - 0.0%
+    StrategyTUSDCurve.balanceOfYYCRVinyTUSD - 0.0%
+    StrategyTUSDCurve.deposit - 0.0%
+    StrategyTUSDCurve.withdraw - 0.0%
+    StrategyTUSDCurve.withdrawAll - 0.0%
+    StrategyTUSDCurve.withdrawTUSD - 0.0%
+
+  contract: StrategyVaultUSDC - 13.2%
+    StrategyVaultUSDC.getName - 100.0%
+    StrategyVaultUSDC.setController - 100.0%
+    StrategyVaultUSDC.setGovernance - 100.0%
+    StrategyVaultUSDC._withdrawAll - 0.0%
+    StrategyVaultUSDC._withdrawSome - 0.0%
+    StrategyVaultUSDC.balanceOf - 0.0%
+    StrategyVaultUSDC.balanceSavingsInToken - 0.0%
+    StrategyVaultUSDC.deposit - 0.0%
+    StrategyVaultUSDC.getAave - 0.0%
+    StrategyVaultUSDC.skim - 0.0%
+    StrategyVaultUSDC.skimmable - 0.0%
+    StrategyVaultUSDC.withdraw - 0.0%
+    StrategyVaultUSDC.withdrawAll - 0.0%
+
+  contract: yDelegatedVault - 12.1%
+    ERC20Detailed.decimals - 100.0%
+    ERC20Detailed.name - 100.0%
+    ERC20Detailed.symbol - 100.0%
+    yDelegatedVault.setController - 100.0%
+    yDelegatedVault.setGovernance - 100.0%
+    yDelegatedVault.setHealthFactor - 100.0%
+    yDelegatedVault._rebalance - 0.0%
+    yDelegatedVault.activate - 0.0%
+    yDelegatedVault.availableToBorrowETH - 0.0%
+    yDelegatedVault.availableToBorrowReserve - 0.0%
+    yDelegatedVault.balance - 0.0%
+    yDelegatedVault.claimInsurance - 0.0%
+    yDelegatedVault.credit - 0.0%
+    yDelegatedVault.debtShare - 0.0%
+    yDelegatedVault.deposit - 0.0%
+    yDelegatedVault.depositAll - 0.0%
+    yDelegatedVault.earn - 0.0%
+    yDelegatedVault.getAave - 0.0%
+    yDelegatedVault.getAaveCore - 0.0%
+    yDelegatedVault.getAaveOracle - 0.0%
+    yDelegatedVault.getPricePerFullShare - 0.0%
+    yDelegatedVault.getReservePrice - 0.0%
+    yDelegatedVault.getReservePriceETH - 0.0%
+    yDelegatedVault.getUnderlyingPrice - 0.0%
+    yDelegatedVault.getUnderlyingPriceETH - 0.0%
+    yDelegatedVault.harvest - 0.0%
+    yDelegatedVault.locked - 0.0%
+    yDelegatedVault.maxSafeETH - 0.0%
+    yDelegatedVault.maxWithdrawal - 0.0%
+    yDelegatedVault.over - 0.0%
+    yDelegatedVault.rebalance - 0.0%
+    yDelegatedVault.repay - 0.0%
+    yDelegatedVault.repayAll - 0.0%
+    yDelegatedVault.reserve - 0.0%
+    yDelegatedVault.safeWithdraw - 0.0%
+    yDelegatedVault.shouldBorrow - 0.0%
+    yDelegatedVault.shouldRebalance - 0.0%
+    yDelegatedVault.underlying - 0.0%
+    yDelegatedVault.withdraw - 0.0%
+    yDelegatedVault.withdrawAll - 0.0%
+
+  contract: yVault - 16.9%
+    ERC20Detailed.decimals - 100.0%
+    ERC20Detailed.name - 100.0%
+    ERC20Detailed.symbol - 100.0%
+    yVault.setController - 100.0%
+    yVault.setGovernance - 100.0%
+    yVault.setMin - 100.0%
+    ERC20._approve - 0.0%
+    ERC20._burn - 0.0%
+    ERC20._mint - 0.0%
+    ERC20._transfer - 0.0%
+    ERC20.allowance - 0.0%
+    ERC20.approve - 0.0%
+    ERC20.balanceOf - 0.0%
+    ERC20.decreaseAllowance - 0.0%
+    ERC20.increaseAllowance - 0.0%
+    ERC20.totalSupply - 0.0%
+    ERC20.transfer - 0.0%
+    ERC20.transferFrom - 0.0%
+    yVault.available - 0.0%
+    yVault.balance - 0.0%
+    yVault.deposit - 0.0%
+    yVault.depositAll - 0.0%
+    yVault.earn - 0.0%
+    yVault.getPricePerFullShare - 0.0%
+    yVault.harvest - 0.0%
+    yVault.withdraw - 0.0%
+    yVault.withdrawAll - 0.0%
+
+  contract: yWETH - 14.2%
+    ERC20Detailed.decimals - 100.0%
+    ERC20Detailed.name - 100.0%
+    ERC20Detailed.symbol - 100.0%
+    yWETH.setController - 100.0%
+    yWETH.setGovernance - 100.0%
+    yWETH.setMin - 100.0%
+    ERC20._approve - 0.0%
+    ERC20._burn - 0.0%
+    ERC20._mint - 0.0%
+    ERC20._transfer - 0.0%
+    ERC20.allowance - 0.0%
+    ERC20.approve - 0.0%
+    ERC20.balanceOf - 0.0%
+    ERC20.decreaseAllowance - 0.0%
+    ERC20.increaseAllowance - 0.0%
+    ERC20.totalSupply - 0.0%
+    ERC20.transfer - 0.0%
+    ERC20.transferFrom - 0.0%
+    yWETH.<fallback> - 0.0%
+    yWETH.available - 0.0%
+    yWETH.balance - 0.0%
+    yWETH.deposit - 0.0%
+    yWETH.depositAll - 0.0%
+    yWETH.depositETH - 0.0%
+    yWETH.earn - 0.0%
+    yWETH.getPricePerFullShare - 0.0%
+    yWETH.harvest - 0.0%
+    yWETH.withdraw - 0.0%
+    yWETH.withdrawAll - 0.0%
+    yWETH.withdrawAllETH - 0.0%
+    yWETH.withdrawETH - 0.0%
+
+Coverage report saved at /home/nocode326/da-fi/da-fi-protocol/reports/coverage.json
+View the report using the Brownie GUI
+========================================================================== short test summary info ===========================================================================
+FAILED tests/functional/strategies/test_config.py::test_strategy_deployment[Strategy8] - brownie.exceptions.VirtualMachineError: revert
+FAILED tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-governance-setGovernance-None] - brownie.exceptions.VirtualMachineError: revert
+FAILED tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-controller-setController-None] - brownie.exceptions.VirtualMachineError: revert
+FAILED tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-strategist-setStrategist-None] - brownie.exceptions.VirtualMachineError: revert
+FAILED tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-fee-setFee-100] - brownie.exceptions.VirtualMachineError: revert
+FAILED tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-withdrawalFee-setWithdrawalFee-100] - brownie.exceptions.VirtualMachineError: revert
+FAILED tests/functional/strategies/test_config.py::test_strategy_setParams[Strategy8-performanceFee-setPerformanceFee-1000] - brownie.exceptions.VirtualMachineError: revert
+FAILED tests/functional/utils/test_oracles.py::test_read[read-Oracle0] - brownie.exceptions.VirtualMachineError: revert
+FAILED tests/functional/utils/test_oracles.py::test_read[read-Oracle1] - brownie.exceptions.VirtualMachineError: revert
+FAILED tests/functional/utils/test_oracles.py::test_read[foresight-Oracle0] - brownie.exceptions.VirtualMachineError: revert
+FAILED tests/functional/utils/test_oracles.py::test_read[foresight-Oracle1] - brownie.exceptions.VirtualMachineError: revert
+===================================================== 11 failed, 95 passed, 2 skipped, 30 warnings in 422.60s (0:07:02) ======================================================
